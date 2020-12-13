@@ -4,7 +4,7 @@ apk add unzip
 mkdir /downloads
 curl https://rclone.org/install.sh | sudo bash
 rclone config
-mount drive:/Downloads /downloads
+rclone mount drive:/Downloads: /downloads --allow-other --cache-db-purge --fast-list --poll-interval 10m
 docker run -d \
   --name=qbittorrent \
   -e PUID=1000 \
