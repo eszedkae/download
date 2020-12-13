@@ -3,6 +3,7 @@
 apk add unzip
 mkdir /downloads
 curl https://rclone.org/install.sh | sudo bash
+rclone config
 mount drive:/Downloads /downloads
 docker run -d \
   --name=qbittorrent \
